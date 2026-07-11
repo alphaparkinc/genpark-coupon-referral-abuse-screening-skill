@@ -1,0 +1,40 @@
+{
+  "name": "genpark-coupon-referral-abuse-screening-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Analyze referral coupon checkouts to flag IP or email anomalies and prevent promotion stacking abuse.",
+  "author": "genpark",
+  "category": "security",
+  "tags": [
+    "coupon-abuse",
+    "security",
+    "checkout",
+    "fraud-detection",
+    "e-commerce"
+  ],
+  "inputs": {
+    "ip_address": {
+      "type": "string",
+      "description": "Customer purchase IP address."
+    },
+    "email_domain": {
+      "type": "string",
+      "description": "Customer account email domain."
+    },
+    "daily_redeemed_count": {
+      "type": "integer",
+      "description": "Redemption frequency count in 24 hours."
+    }
+  },
+  "outputs": {
+    "abuse_flag": {
+      "type": "boolean",
+      "description": "True if validation limits are violated."
+    },
+    "risk_classification": {
+      "type": "string",
+      "description": "Risk tier: low, medium, high."
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
