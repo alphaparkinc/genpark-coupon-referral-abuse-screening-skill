@@ -1,12 +1,8 @@
 # genpark-coupon-referral-abuse-screening-skill
 
-> **GenPark AI Agent Skill** -- Checkout coupon referral abuse auditor.
+> **GenPark AI Agent Skill** -- Checkout coupon promo referral stack abuse detector
 
 ## Quick Start
-
 ```python
-from client import CouponReferralAbuseClient
-client = CouponReferralAbuseClient()
-res = client.screen_redemption("1.1.1.1", "gmail.com", 1)
-print(res["abuse_flag"])
+python example_usage.py
 ```
